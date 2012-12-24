@@ -1,0 +1,13 @@
+def rot13(string):
+    """
+    Takes a string and applies the rot13 code to it.
+    """
+
+    string = str(string)
+    tocode = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    code   = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+
+    rot13 = string.maketrans(tocode, code)
+    return string.translate(string, rot13)
+
+rot13("Hola, que tal, comienza nuestro programa, atencion.")
