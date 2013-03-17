@@ -8,7 +8,12 @@
 This module contain the Person class.
 """
 
-class Person:
+from classtools import AttrDisplay
+
+class Person(AttrDisplay):
+    """
+    Create and process person records
+    """
     def __init__(self, name, job = None, pay = 0):
         """
         Initiate the class. The three fields are:
@@ -20,11 +25,11 @@ class Person:
         self.job  = job
         self.pay  = pay
 
-    def __str__(self):
-        """
-        Format: [Name: John Doe, Job: Barbarian, Pay: 5000]
-        """
-        return '[Name: %s, Job: %s, Pay: %s]' % (self.name, self.job, self.pay)
+#    def __str__(self):  ##Phased out due to the use of AttrDisplay
+#        """
+#        Format: [Name: John Doe, Job: Barbarian, Pay: 5000]
+#        """
+#        return '[Name: %s, Job: %s, Pay: %s]' % (self.name, self.job, self.pay)
 
     def firstName(self):
         """
