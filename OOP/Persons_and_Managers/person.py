@@ -20,3 +20,8 @@ class Person:
         self.job  = job
         self.pay  = pay
         
+if __name__ == '__main__':                              #Test de class
+    bob = Person('Bob Smith')
+    sue = Person('Sue Jones', job = 'dev', pay = 100000)
+    print(bob.name, bob.pay)
+    print(sue.name, sue.pay)
