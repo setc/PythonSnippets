@@ -64,3 +64,8 @@ if __name__ == '__main__':                              #Test de class
     sue.giveRaise(.10)
 #    print("After a raise of 10% sue earns ",sue.pay)
     print(sue)
+    tom = Manager('Tom Jones', 'mgr', 50000)
+    #Is not unusual to get a raise
+    tom.giveRaise(.10)
+    print('Tom Jones last name is: ', tom.lastName())
+    print(tom)
