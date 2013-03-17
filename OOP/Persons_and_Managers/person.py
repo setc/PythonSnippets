@@ -43,6 +43,14 @@ class Person:
         Update the pay by adding a raise based on percentage
         """
         self.pay = int(self.pay * (1 + percent))
+
+class Manager(Person):
+    """
+    Managers get better raises, oh lalá.
+    """
+    def giveRaise(self, percent, bonus=.10):
+        Person.giveRaise(self, percent + bonus)
+        
         
 if __name__ == '__main__':                              #Test de class
     bob = Person('Bob Smith')
