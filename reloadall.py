@@ -6,7 +6,7 @@ import types
 from imp import reload                          #Only required in Python3
 
 def status(module):
-    print('reloading' + module.__name__)
+    print('reloading ' + module.__name__)
 
 def transitive_reload(module, visited):
     if not module in visited:             #To catch cycles and duplicates
