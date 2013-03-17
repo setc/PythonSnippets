@@ -48,6 +48,9 @@ class Manager(Person):
     """
     Managers get better raises, oh lalá.
     """
+    def __init__(self, name, pay):
+        Person.__init__(self, name, 'mgr', pay)
+
     def giveRaise(self, percent, bonus=.10):
         Person.giveRaise(self, percent + bonus)
         
@@ -64,7 +67,8 @@ if __name__ == '__main__':                              #Test de class
     sue.giveRaise(.10)
 #    print("After a raise of 10% sue earns ",sue.pay)
     print(sue)
-    tom = Manager('Tom Jones', 'mgr', 50000)
+#    tom = Manager('Tom Jones', 'mgr', 50000)
+    tom = Manager('Tom Jones', 50000)
     #Is not unusual to get a raise
     tom.giveRaise(.10)
     print('Tom Jones last name is: ', tom.lastName())
