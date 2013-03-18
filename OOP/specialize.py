@@ -27,7 +27,7 @@ class Provider(Super):
 
 if __name__ == '__main__':
     for klass in (Inheritor, Replacer, Extender):
-        print('\fn' + klass.__name__ + '...')
+        print('\n' + klass.__name__ + '...')
         klass().method()
     print('\nProvider...')
     x = Provider()
