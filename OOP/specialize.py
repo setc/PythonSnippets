@@ -25,7 +25,7 @@ class Provider(Super):
     def action(self):
         print('in Provider.action')
 
-if __name__ == 'main':
+if __name__ == '__main__':
     for klass in (Inheritor, Replacer, Extender):
         print('\fn' + klass.__name__ + '...')
         klass().method()
