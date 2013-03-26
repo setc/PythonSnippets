@@ -7,3 +7,16 @@ Ok, now it's time to test the doctest in Python.
 >>> 4 * 5
 
 20
+
+First test I wrote and they are bad. Why?  Stupid mistake on my part, I left a empty line between the promt and its answer. In other words.
+
+>>> print("pato")
+
+pato
+
+Makes the interpreter think that the expected output is nothing. Meanwhile
+
+>>> print("pato") 
+pato
+
+Work as expected.
