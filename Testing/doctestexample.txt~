@@ -32,5 +32,4 @@ Exception handling in doctest, example.
 >>> def snafu():
 ...    yield 'a'
 ...    return None
-Traceback (most recent call last):
 SyntaxError: 'return' with argument inside generator (<doctest doctestexample.txt[6], line 3)
