@@ -1,24 +1,25 @@
-#-------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 # Name:        module1
 # Purpose:
 #
-# Author:      Sebasti√°n Torrente
+# Author:      Sebasti·n Torrente
 #
 # Created:     18/08/2012
-# Copyright:   (c) Sebasti√°n Torrente 2012
+# Copyright:   (c) Sebasti·n Torrente 2012
 # Licence:     <your licence>
-#-------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 
-import pygame, sys
+import pygame
+import sys
 from pygame.locals import *
 
 pygame.init()
 
-FPS=30 #Frames per second
-fpsClock=pygame.time.Clock()
+FPS = 30  # Frames per second
+fpsClock = pygame.time.Clock()
 
 #set up the window
-DISPLAYSURF=pygame.display.set_mode((400,300),0,32)
+DISPLAYSURF = pygame.display.set_mode((400, 300), 0, 32)
 pygame.display.set_caption('Animation')
 
 WHITE = (255, 255, 255)
@@ -27,7 +28,8 @@ catx = 10
 caty = 10
 direction = 'right'
 
-while True: #Main game loop
+
+while True:  # Main game loop
     DISPLAYSURF.fill(WHITE)
 
     if direction == 'right':
@@ -47,10 +49,10 @@ while True: #Main game loop
         if caty == 10:
             direction = 'right'
 
-    DISPLAYSURF.blit(catImg, (catx,caty))
+    DISPLAYSURF.blit(catImg, (catx, caty))
 
     for event in pygame.event.get():
-        if event.type==QUIT:
+        if event.type == QUIT:
             pygame.quit()
             sys.exit()
 
